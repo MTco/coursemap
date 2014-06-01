@@ -35,7 +35,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0.rc1'
 
   gem 'guard'
   gem 'guard-rspec', require: false
