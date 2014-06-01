@@ -35,11 +35,11 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-rails'
+  gem 'rspec', '~> 3.0.0.rc1'
   gem 'rspec-rails', '~> 3.0.0.rc1'
 
   gem 'guard'
-  gem 'guard-rspec', require: false
-  gem 'guard-bundler', require: false
+  gem 'guard-rspec', '~> 4.2.9'
   gem 'guard-livereload', require: false
 end
 
