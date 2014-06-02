@@ -1,11 +1,12 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'coursemap'
+set :repo_url, 'git@github.com:janukevic/coursemap.git'
 
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call:w
+
 
 # Default deploy_to directory is /var/www/my_app
 # set :deploy_to, '/var/www/my_app'
@@ -23,7 +24,7 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml .env}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
