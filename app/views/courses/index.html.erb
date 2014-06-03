@@ -5,23 +5,16 @@
     <tr>
       <th>Name</th>
       <th>Largeicon</th>
-      <th>Photo</th>
       <th>Shortdescription</th>
-      <th>Video</th>
-      <th>Longdescription</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @courses.each do |course| %>
+    <% @courses.limit(30).each do |course| %>
       <tr>
         <td><%= course.name %></td>
-        <td><%= course.largeIcon %></td>
-        <td><%= course.photo %></td>
+        <td><%= image_tag course.largeIcon %></td>
         <td><%= course.shortDescription %></td>
-        <td><%= course.video %></td>
-        <td><%= course.longDescription %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

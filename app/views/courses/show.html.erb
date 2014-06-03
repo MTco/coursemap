@@ -6,28 +6,22 @@
 </p>
 
 <p>
-  <strong>Largeicon:</strong>
-  <%= @course.largeIcon %>
-</p>
-
-<p>
   <strong>Photo:</strong>
-  <%= @course.photo %>
-</p>
-
-<p>
-  <strong>Shortdescription:</strong>
-  <%= @course.shortDescription %>
+  <p><%= image_tag @course.photo %></p>
 </p>
 
 <p>
   <strong>Video:</strong>
-  <%= @course.video %>
+  <p>
+    <iframe width="560" height="315"
+      src="//www.youtube.com/embed/<%= @course.video %>" frameborder="0" allowfullscreen>
+    </iframe>
+  </p>
 </p>
 
 <p>
   <strong>Longdescription:</strong>
-  <%= @course.longDescription %>
+  <%= raw(@course.longDescription) %>
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
