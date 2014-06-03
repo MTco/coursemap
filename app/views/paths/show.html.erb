@@ -10,5 +10,13 @@
   <%= @path.description %>
 </p>
 
+<p>
+  <strong>Courses:</strong>
+  <% @path.courses.each do |course| %>
+    <li><%= course.name %></li>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_path_path(@path) %> |
 <%= link_to 'Back', paths_path %>

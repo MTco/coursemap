@@ -20,8 +20,9 @@ feature "Create Paths", :type => :feature do
     click_link 'New Path'
     fill_in 'Name', with: 'Path1'
     fill_in 'Description', with: 'Description1'
-    fill_in 'Courses', with: 'Course 1'
+    check 'Automata'
     click_button 'Create Path'
-
+    expect(page).to have_content('Path was successfully created')
+    expect(page).to have_content('Automata')
   end
 end

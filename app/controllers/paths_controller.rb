@@ -69,6 +69,6 @@ class PathsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def path_params
-      params.require(:path).permit(:name, :description)
+      params.require(:path).permit(:name, :description, course_ids: [])
     end
 end
