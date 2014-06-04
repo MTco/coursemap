@@ -16,11 +16,12 @@ feature "Create Paths", :type => :feature do
   end
 
   scenario "create a path containing courses" do
+    Course.create!(name: "Automata")
     visit paths_path
     click_link 'New Path'
     fill_in 'Name', with: 'Path1'
     fill_in 'Description', with: 'Description1'
-    check 'Automata'
+    select 'Automata', match: :first
     click_button 'Create Path'
     expect(page).to have_content('Path was successfully created')
     expect(page).to have_content('Automata')
