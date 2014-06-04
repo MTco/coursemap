@@ -12,8 +12,21 @@
   </head>
 
   <body>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name"><h1><%= link_to 'CourseMap', root_path %></h1></li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+      <div class="top-bar-section">
+        <ul>
+          <li><%= link_to 'Paths', paths_path %></li>
+          <li><%= link_to 'Courses', courses_path %></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="row">
-      <div class="small-8 large-centered columns">
+      <div class="small-12 large-centered columns">
         <%= yield %>
       </div>
       <%= javascript_include_tag "application" %>
