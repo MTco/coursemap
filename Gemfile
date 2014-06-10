@@ -39,16 +39,16 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-rails'
-  gem 'rspec', '~> 3.0.0.rc1'
-  gem 'rspec-rails', '~> 3.0.0.rc1'
+  gem 'rspec', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.0.0'
 
   gem 'guard'
-  gem 'guard-rspec', '~> 4.2.9'
+  gem 'guard-rspec', '~> 4.2.10'
   gem 'guard-livereload', require: false
 end
 
 group :test do
-  gem 'capybara', github: 'jnicklas/capybara', branch: 'master'
+  gem 'capybara'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
