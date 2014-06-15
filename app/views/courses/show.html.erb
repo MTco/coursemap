@@ -1,27 +1,41 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <p><%= image_tag @course.photo %></p>
+</p>
+
+
+<p>
   <strong>Name:</strong>
   <%= @course.name %>
 </p>
 
 <p>
-  <strong>Photo:</strong>
-  <p><%= image_tag @course.photo %></p>
+  <strong>Short Name:</strong>
+  <%= @course.shortName%>
 </p>
 
 <p>
-  <strong>Video:</strong>
+  <strong>Instructors:</strong>
+  <%= @course.instructors %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= link_to @course.url %>
+</p>
+
+<p>
   <p>
     <iframe width="560" height="315"
-      src="//www.youtube.com/embed/<%= @course.video %>" frameborder="0" allowfullscreen>
+      src="https://www.youtube.com/embed/<%= @course.video %>" frameborder="0" allowfullscreen>
     </iframe>
   </p>
 </p>
 
 <p>
-  <strong>Longdescription:</strong>
-  <%= raw(@course.longDescription) %>
+  <strong>Description:</strong>
+  <%= raw(@course.description) %>
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |

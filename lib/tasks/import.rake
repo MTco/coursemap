@@ -17,7 +17,7 @@ namespace :import do
         c.shortName   = course["shortName"]
         c.description = course["aboutTheCourse"]
         c.photo       = course["photo"]
-        c.video       = "https://www.youtube.com/watch?v=#{course["video"]}"
+        c.video       = course["video"]
         c.instructors  = course["instructor"]
       end
     end
@@ -33,7 +33,7 @@ namespace :import do
         c.shortName   = course["Course Number"]
         c.description = course["About This Course"]
         c.photo       = course["Course Image: Banner"]
-        c.video       = course["Course Video Link (YouTube)"]
+        c.video       = course["Course Video Link (YouTube)"][/(?<=[?&]v=)[^&$]+/]
         c.url         = course["Path"]
         c.instructors = course["Course Staff"]
         #c.category    = course["Subject"]

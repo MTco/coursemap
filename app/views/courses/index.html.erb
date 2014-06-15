@@ -14,8 +14,8 @@
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.name %></td>
-        <td><%= image_tag course.largeIcon %></td>
-        <td><%= course.shortDescription %></td>
+        <td><%= image_tag course.photo, size: "100x100" %></td>
+        <td><%= truncate(course.description, length: 300) %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
